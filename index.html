@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Battle Royale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="firebase-config.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen">
+            <h1>Emoji Battle Royale</h1>
+            <input type="text" id="player-name" placeholder="Your name" maxlength="10">
+            <button id="start-btn">Join Battle!</button>
+            <p>Use arrow keys or WASD to move</p>
+            <p>Avoid getting tagged!</p>
+        </div>
+        <div id="game-screen" style="display:none;">
+            <div id="game-board"></div>
+            <div id="game-info">
+                <p>Players: <span id="player-count">0</span></p>
+                <p>Time: <span id="game-time">0</span>s</p>
+                <p>Status: <span id="game-status">Waiting...</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
